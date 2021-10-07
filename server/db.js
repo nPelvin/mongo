@@ -1,6 +1,7 @@
 import mongoose from "mongoose";
+require("dotenv").config();
 
-const dbUrl = process.env.MONGODB_URI || "mongodb://localhost:27017/cyf";
+const dbUrl = process.env.MONGODB_URI;
 
 const configuration = {
 	serverSelectionTimeoutMS: 5000,

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Headline from "./Headline";
 import { Link } from "react-router-dom";
 
-const Search = ({ apiData, setApiData, searchTerm, setSearchTerm }) => {
+const Search = ({ apiData, setSearchTerm }) => {
 	const [searchInput, setSearchInput] = useState("");
 
 	function handleSearchInput(event) {
@@ -40,7 +40,6 @@ const Search = ({ apiData, setApiData, searchTerm, setSearchTerm }) => {
 
 			<Headline
 				apiData={apiData}
-				searchTerm={searchTerm}
 			/>
 		</div>
 	);

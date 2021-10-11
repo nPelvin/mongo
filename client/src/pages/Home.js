@@ -35,8 +35,8 @@ export function Home() {
 				"X-Api-Key": "59cbaf20e3e06d3565778e7b6e0044a4fa7f43429198e666d8c855a0",
 			},
 			body: JSON.stringify({
-				// queryString: `title:\"${searchTerm}\" AND lastPublishDateTime:>2017-01-01T00:00:00Z`,
-				queryString: `${searchTerm} AND lastPublishDateTime:>2017-01-01T00:00:00Z`,
+				queryString: `${searchTerm ? `title:\"${searchTerm}\"` : null } AND lastPublishDateTime:>2017-01-01T00:00:00Z`,
+				// queryString: `${searchTerm} AND lastPublishDateTime:>2017-01-01T00:00:00Z`,
 				resultContext: {
 					aspects: ["title", "lifecycle", "location", "summary", "editorial"],
 					sortOrder: "DESC",

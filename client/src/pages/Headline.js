@@ -5,7 +5,9 @@ function Headline({ apiData }) {
 			<div>
 				{apiData
 					? apiData.results[0].results.map((x, index) => (
-							<div key={index}>{x.title.title}</div>
+							<div key={index}>
+								<a href={x.location.url}>{x.title.title}</a>
+							</div>
 					  ))
 					: null}
 				{apiData

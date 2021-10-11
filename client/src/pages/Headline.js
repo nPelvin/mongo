@@ -6,11 +6,11 @@ function Headline({ apiData }) {
 			{apiData
 				? apiData.results[0].results.map((x, index) => (
 						<div key={index}>
-							{/* <a href={x.location.uri}> */}
+							
 							<h3>{x.title.title}</h3>
-							{/* </a> */}
+					
 							<br />
-							<p>{x.editorial.subheading}</p>
+							<p>{x.editorial.subheading}{` - `}<a href={x.location.uri}>Link</a></p>
 							<br />
 						</div>
 				  ))

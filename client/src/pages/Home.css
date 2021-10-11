@@ -23,3 +23,35 @@
 	background-color: #33302e;
 	height: 39px;
 }
+
+.search-row {
+	margin: 2rem;
+}
+
+
+
+
+.input {
+	width: 50%;
+	padding: 0.25rem
+}
+
+
+.submit {
+	padding: 0.25rem 0.5rem
+}
+
+
+@media only screen and (min-width: 600px) {
+.input {
+	width: 35%;
+	padding: 0.25rem
+}
+}
+
+@media only screen and (min-width: 900px) {
+.input {
+	width: 25%;
+	padding: 0.25rem
+}
+}

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Headline from "./Headline";
 import "./Home.css";
+import Search from "./Search";
 
 export function Home() {
 	const [apiData, setApiData] = useState(null);
@@ -60,6 +61,7 @@ export function Home() {
 	return (
 		<main role="main" className="main">
 			<header className="header"></header>
+			<Search />
 			<Headline apiData={apiData}/>
 				<Link to="/about/this/site">About</Link>
 		</main>

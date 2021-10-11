@@ -8,6 +8,7 @@ const App = () => (
 		<Route path="/" exact>
 			<Home />
 		</Route>
+		{/* <Route path="/results" component={Results}></Route> */}
 		<Route path="/about/this/site">
 			<About />
 		</Route>

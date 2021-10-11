@@ -1,13 +1,18 @@
 import React, { useState } from "react";
+import Headline from "./Headline";
 import { Link } from "react-router-dom";
 
-const Search = () => {
+const Search = ({ apiData, setApiData, searchTerm, setSearchTerm }) => {
 	const [searchInput, setSearchInput] = useState("");
 
 	function handleSearchInput(event) {
 		setSearchInput(event.target.value);
 	}
-	function handleSubmit(event) {}
+
+	function handleSubmit(event) {
+        setSearchTerm(searchInput);
+        event.preventDefault();
+    }
 
 	return (
 		<div>
@@ -26,10 +31,17 @@ const Search = () => {
 							searchRes: searchInput,
 						}}
 					> */}
-					<button className="submit" onClick={handleSubmit}>Search</button>
+					<button className="submit" onClick={handleSubmit}>
+						Search
+					</button>
 					{/* </Link> */}
 				</div>
 			</form>
+
+			<Headline
+				apiData={apiData}
+				searchTerm={searchTerm}
+			/>
 		</div>
 	);
 };

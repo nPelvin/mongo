@@ -31,9 +31,9 @@ function Header(props) {
 										href="/"
 										title="Go to Financial Times homepage"
 									>
-										<span className="o-header__visually-hidden">
+										{/* <span className="o-header__visually-hidden">
 											Financial Times
-										</span>
+										</span> */}
 									</a>
 								</div>
 
@@ -105,13 +105,13 @@ function Header(props) {
 					data-o-header-drawer--no-js
 				>
 					<div className="o-header__drawer-inner">
-						<div className="o-header__drawer-tools">
-							<a className="o-header__drawer-tools-logo" href="/">
+						{/* <div className="o-header__drawer-tools"> */}
+							{/* <a className="o-header__drawer-tools-logo" href="/">
 								<span className="o-header__visually-hidden">
 									Financial Times
 								</span>
-							</a>
-							<button
+							</a> */}
+							{/* <button
 								type="button"
 								className="o-header__drawer-tools-close"
 								aria-controls="o-header-drawer"
@@ -120,9 +120,9 @@ function Header(props) {
 								<span className="o-header__visually-hidden">
 									Close drawer menu
 								</span>
-							</button>
-							<p className="o-header__drawer-current-edition">UK Edition</p>
-						</div>
+							</button> */}
+							{/* <p className="o-header__drawer-current-edition">UK Edition</p> */}
+						{/* </div> */}
 
 						<div className="o-header__drawer-search search-span">
 							<form

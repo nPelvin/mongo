@@ -7,8 +7,15 @@ export const configuredHelmet = () =>
 			directives: {
 				defaultSrc: ["'self'", "guarded-dusk-77491.herokuapp.com", "ft.com"],
 				objectSrc: ["'none'"],
-				scriptSrc: ["'self'", "unpkg.com", "polyfill.io", "ft.com"],
+				scriptSrc: [
+					"'self'",
+					"unpkg.com",
+					"polyfill.io",
+					"ft.com",
+					"https://www.ft.com/__origami/service/build/v3/bundles/js?components=o-grid@^6.0.0,o-normalise@^3.0.0,o-fonts@^5.0.0,o-header@^9.0.3,o-table@^9.0.2,o-autoinit@^3.0.0&system_code=origami",
+				],
 				styleSrc: ["'self'", "https: 'unsafe-inline'", "ft.com"],
+				imgSrc: ["'self'", "https: 'unsafe-inline'", "ft.com", "http://*", "https://*"],
 				upgradeInsecureRequests: [],
 			},
 		},

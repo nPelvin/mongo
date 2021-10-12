@@ -57,7 +57,7 @@ export function Home() {
 	return (
 		<main role="main" className="o-colors-page-background">
 			<Header />
-			<header className="header"></header>
+			{/* <header className="header"></header> */}
 			<div className="o-colors-page-background o-grid-container o-typography-wrapper">
 				<Search
 					apiData={apiData}

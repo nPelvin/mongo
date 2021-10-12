@@ -12,7 +12,6 @@ export const configuredHelmet = () =>
 					"unpkg.com",
 					"polyfill.io",
 					"ft.com",
-					"https://www.ft.com*",
 				],
 				styleSrc: ["'self'", "https: 'unsafe-inline'", "ft.com"],
 				imgSrc: ["'self'", "https: 'unsafe-inline'", "ft.com", "http://*", "https://*"],

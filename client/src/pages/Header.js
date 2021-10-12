@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Headline from "./Headline";
 
-function Header({ apiData, setSearchTerm }) {
+function Header({ apiData, setSearchTerm, resultsReturned }) {
     	const [searchInput, setSearchInput] = useState("");
 
 			function handleSearchInput(event) {
@@ -176,7 +176,7 @@ function Header({ apiData, setSearchTerm }) {
 					</div>
 				</div>
 			</div>
-
+			<span className="startingPagination">Results returned: {resultsReturned}</span>
 			<Headline apiData={apiData} />
 		</div>
 	);

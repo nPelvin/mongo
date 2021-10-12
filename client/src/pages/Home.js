@@ -10,6 +10,7 @@ export function Home() {
 	//pagination variables
 	const [offset, setOffset] = useState(0);
 	const [maxResults, setMaxResults] = useState(100);
+	const [resultsReturned, setResultsReturned] = useState(0);
 
 	const api2 =
 		"https://guarded-dusk-77491.herokuapp.com/https://api.ft.com/content/search/v1?";
@@ -48,6 +49,7 @@ export function Home() {
 			.then((body) => {
 				setApiData(body);
 				console.log(body);
+				setResultsReturned(body.results[0].indexCount);
 			})
 			.catch((err) => {
 				console.error(err);
@@ -61,6 +63,7 @@ export function Home() {
 				setApiData={setApiData}
 				searchTerm={searchTerm}
 				setSearchTerm={setSearchTerm}
+				resultsReturned={resultsReturned}
 			/>
 			{/* <header className="header"></header> */}
 			<div className="o-colors-page-background o-grid-container o-typography-wrapper">
@@ -70,7 +73,7 @@ export function Home() {
 					searchTerm={searchTerm}
 					setSearchTerm={setSearchTerm}
 				/> */}
-				<Link to="/about/this/site">About</Link>
+				{/* <Link to="/about/this/site">About</Link> */}
 			</div>
 		</main>
 	);

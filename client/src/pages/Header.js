@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Headline from "./Headline";
 
-function Header({ apiData, setSearchTerm, resultsReturned }) {
+function Header({ apiData, setSearchTerm, resultsReturned, offset, maxResults }) {
     	const [searchInput, setSearchInput] = useState("");
 
 			function handleSearchInput(event) {
@@ -176,7 +176,11 @@ function Header({ apiData, setSearchTerm, resultsReturned }) {
 					</div>
 				</div>
 			</div>
-			<span className="startingPagination">Results returned: {resultsReturned}</span>
+			<span className="startingPagination">
+				Results returned: {resultsReturned}, Page:{" "}
+				{(maxResults + offset) / maxResults}/
+				{Math.ceil((resultsReturned) / maxResults)}
+			</span>
 			<Headline apiData={apiData} />
 		</div>
 	);

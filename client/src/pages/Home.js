@@ -64,6 +64,8 @@ export function Home() {
 				searchTerm={searchTerm}
 				setSearchTerm={setSearchTerm}
 				resultsReturned={resultsReturned}
+				offset={offset}
+				maxResults={maxResults}
 			/>
 			{/* <header className="header"></header> */}
 			<div className="o-colors-page-background o-grid-container o-typography-wrapper">

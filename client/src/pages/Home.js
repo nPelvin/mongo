@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import Header from "./Header";
 import "./Home.css";
 import Search from "./Search";
 
@@ -54,10 +55,10 @@ export function Home() {
 	}, [searchTerm]);
 
 	return (
-		<main role="main" className="">
+		<main role="main" className="o-colors-page-background">
+			<Header />
 			<header className="header"></header>
 			<div className="o-colors-page-background o-grid-container o-typography-wrapper">
-				<h1>Financial Times</h1>
 				<Search
 					apiData={apiData}
 					setApiData={setApiData}

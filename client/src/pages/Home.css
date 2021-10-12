@@ -3,6 +3,10 @@
 	padding: 0px;
 }
 
+.search-span {
+display:block
+}
+
 .header {
 	background-color: #33302e;
 	height: 39px;

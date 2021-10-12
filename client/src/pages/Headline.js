@@ -10,9 +10,9 @@ function Headline({ apiData }) {
 								<img src={x.images[0].url} alt="News" />
 							) : null}
 							<h3>{x.title.title}</h3>
-							Initial:{x.lifecycle.initialPublishDateTime}<br />
-							Last:{x.lifecycle.lastPublishDateTime}
-							<br />
+							{/* Initial:{x.lifecycle.initialPublishDateTime}<br />
+							Last:{x.lifecycle.lastPublishDateTime} */}
+							{/* <br /> */}
 							<p>
 								{x.editorial.subheading}
 								{` - `}

@@ -4,7 +4,7 @@
 }
 
 .search-span {
-display:block
+	display: block;
 }
 
 .header {
@@ -16,27 +16,36 @@ display:block
 	margin: 2rem;
 }
 
-.input {
-	width: 50%;
-	padding: 0.25rem
-}
-
-
 .submit {
-	padding: 0.25rem 0.5rem
+	padding: 0.25rem 0.5rem;
 }
 
-
-@media only screen and (min-width: 600px) {
-.input {
-	width: 35%;
-	padding: 0.25rem
-}
+.headlines {
+	margin: auto;
 }
 
-@media only screen and (min-width: 900px) {
-.input {
-	width: 25%;
-	padding: 0.25rem
+@media only screen and (min-width: 768px) {
+	.search-span {
+		margin: auto;
+		width: 80%;
+	}
 }
+@media only screen and (min-width: 920px) {
+	.search-span {
+		width: 70%;
+		margin: auto;
+	}
+}
+
+@media only screen and (min-width: 1080px) {
+	.search-span {
+		width: 60%;
+		margin: auto;
+	}
+}
+@media only screen and (min-width: 1200px) {
+	.search-span {
+		width: 50%;
+		margin: auto;
+	}
 }

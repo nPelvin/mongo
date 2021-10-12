@@ -7,7 +7,12 @@ export const configuredHelmet = () =>
 			directives: {
 				defaultSrc: ["'self'", "guarded-dusk-77491.herokuapp.com", "ft.com"],
 				objectSrc: ["'none'"],
-				scriptSrc: ["'self'", "unpkg.com", "polyfill.io", "ft.com"],
+				scriptSrc: [
+					"'self'",
+					"unpkg.com",
+					"polyfill.io",
+					"www.ft.com",
+				],
 				styleSrc: ["'self'", "https: 'unsafe-inline'", "ft.com"],
 				imgSrc: [
 					"'self'",

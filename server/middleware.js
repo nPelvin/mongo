@@ -5,10 +5,10 @@ export const configuredHelmet = () =>
 	helmet({
 		contentSecurityPolicy: {
 			directives: {
-				defaultSrc: ["'self'", "guarded-dusk-77491.herokuapp.com"],
+				defaultSrc: ["'self'", "guarded-dusk-77491.herokuapp.com", "ft.com"],
 				objectSrc: ["'none'"],
-				scriptSrc: ["'self'", "unpkg.com", "polyfill.io"],
-				styleSrc: ["'self'", "https: 'unsafe-inline'"],
+				scriptSrc: ["'self'", "unpkg.com", "polyfill.io", "ft.com"],
+				styleSrc: ["'self'", "https: 'unsafe-inline'", "ft.com"],
 				upgradeInsecureRequests: [],
 			},
 		},

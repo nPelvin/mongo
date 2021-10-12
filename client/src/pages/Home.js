@@ -6,6 +6,10 @@ import Search from "./Search";
 export function Home() {
 	const [searchTerm, setSearchTerm] = useState(null);
 	const [apiData, setApiData] = useState("");
+	//pagination variables
+	const [offset, setOffset] = useState(0);
+	const [maxResults, setMaxResults] = useState(100);
+
 	const api2 =
 		"https://guarded-dusk-77491.herokuapp.com/https://api.ft.com/content/search/v1?";
 
@@ -42,6 +46,7 @@ export function Home() {
 			})
 			.then((body) => {
 				setApiData(body);
+				console.log(body);
 			})
 			.catch((err) => {
 				console.error(err);
@@ -49,15 +54,18 @@ export function Home() {
 	}, [searchTerm]);
 
 	return (
-		<main role="main" className="main">
+		<main role="main" className="">
 			<header className="header"></header>
-			<Search
-				apiData={apiData}
-				setApiData={setApiData}
-				searchTerm={searchTerm}
-				setSearchTerm={setSearchTerm}
-			/>
-			<Link to="/about/this/site">About</Link>
+			<div className="o-colors-page-background o-grid-container o-typography-wrapper">
+				<h1>Financial Times</h1>
+				<Search
+					apiData={apiData}
+					setApiData={setApiData}
+					searchTerm={searchTerm}
+					setSearchTerm={setSearchTerm}
+				/>
+				<Link to="/about/this/site">About</Link>
+			</div>
 		</main>
 	);
 }

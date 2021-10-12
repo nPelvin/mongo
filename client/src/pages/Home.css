@@ -3,22 +3,6 @@
 	padding: 0px;
 }
 
-.main {
-	background-color: #fff1e5;
-}
-
-.logo {
-	width: 100px;
-}
-
-.message {
-	color: blue;
-}
-
-.message:hover {
-	background-color: yellow;
-}
-
 .header {
 	background-color: #33302e;
 	height: 39px;
@@ -27,9 +11,6 @@
 .search-row {
 	margin: 2rem;
 }
-
-
-
 
 .input {
 	width: 50%;

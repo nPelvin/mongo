@@ -56,15 +56,20 @@ export function Home() {
 
 	return (
 		<main role="main" className="o-colors-page-background">
-			<Header />
+			<Header
+				apiData={apiData}
+				setApiData={setApiData}
+				searchTerm={searchTerm}
+				setSearchTerm={setSearchTerm}
+			/>
 			{/* <header className="header"></header> */}
 			<div className="o-colors-page-background o-grid-container o-typography-wrapper">
-				<Search
+				{/* <Search
 					apiData={apiData}
 					setApiData={setApiData}
 					searchTerm={searchTerm}
 					setSearchTerm={setSearchTerm}
-				/>
+				/> */}
 				<Link to="/about/this/site">About</Link>
 			</div>
 		</main>

@@ -1,17 +1,34 @@
 import React, { useState } from "react";
 import Headline from "./Headline";
+import Pagination from "./Pagination";
+import PaginationSmall from "./PaginationSmall";
 
-function Header({ apiData, setSearchTerm, resultsReturned, offset, maxResults }) {
-    	const [searchInput, setSearchInput] = useState("");
+function Header({
+	apiData,
+	setSearchTerm,
+	resultsReturned,
+	offset,
+	maxResults,
+	page,
+	setPage,
+	setOffset,
+}) {
+	const [searchInput, setSearchInput] = useState("");
 
-			function handleSearchInput(event) {
-				setSearchInput(event.target.value);
-			}
+	function handleSearchInput(event) {
+		setSearchInput(event.target.value);
+	}
 
-			function handleSubmit(event) {
-				setSearchTerm(searchInput);
-				event.preventDefault();
-			}
+	function handleSubmit(event) {
+		// 
+		// event.preventDefault();
+		// 
+		// event.preventDefault();
+		setSearchTerm(searchInput);
+		event.preventDefault();
+        setPage(1);
+        setOffset(0);
+	}
 	return (
 		<div>
 			<header
@@ -49,8 +66,8 @@ function Header({ apiData, setSearchTerm, resultsReturned, offset, maxResults })
 							</div>
 
 							{/* <div className="o-header__top-column o-header__top-column--right"> */}
-								{/* <!--<div className="o-header__top-takeover"></div>--> */}
-								{/* <a
+							{/* <!--<div className="o-header__top-takeover"></div>--> */}
+							{/* <a
 									className="o-header__top-link o-header__top-link--myft"
 									href="/myft"
 									aria-label="My F T"
@@ -179,9 +196,9 @@ function Header({ apiData, setSearchTerm, resultsReturned, offset, maxResults })
 			<span className="startingPagination">
 				Results returned: {resultsReturned}, Page:{" "}
 				{(maxResults + offset) / maxResults}/
-				{Math.ceil((resultsReturned) / maxResults)}
+				{Math.ceil(resultsReturned / maxResults)}
 			</span>
-			<Headline apiData={apiData} />
+			{/* <PaginationSmall page={page} /> */}
 		</div>
 	);
 }

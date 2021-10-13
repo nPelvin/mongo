@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Header from "./Header";
 import "./Home.css";
 import Search from "./Search";
+import PaginationSmall from "./PaginationSmall";
 
 export function Home() {
 	const [searchTerm, setSearchTerm] = useState(null);
@@ -11,6 +12,7 @@ export function Home() {
 	const [offset, setOffset] = useState(0);
 	const [maxResults, setMaxResults] = useState(100);
 	const [resultsReturned, setResultsReturned] = useState(0);
+	const [page, setPage] = useState(1);
 
 	const api2 =
 		"https://guarded-dusk-77491.herokuapp.com/https://api.ft.com/content/search/v1?";
@@ -24,7 +26,9 @@ export function Home() {
 			},
 			body: JSON.stringify({
 				queryString: `${
-					searchTerm ? `title:\"${searchTerm}\" AND lastPublishDateTime:>2017-01-01T00:00:00Z` : `lastPublishDateTime:>2017-01-01T00:00:00Z`
+					searchTerm
+						? `title:\"${searchTerm}\" AND lastPublishDateTime:>2017-01-01T00:00:00Z`
+						: `lastPublishDateTime:>2017-01-01T00:00:00Z`
 				} `,
 				resultContext: {
 					aspects: [
@@ -35,6 +39,7 @@ export function Home() {
 						"editorial",
 						"images",
 					],
+					offset: `${offset}`,
 					sortOrder: "DESC",
 					sortField: "initialPublishDateTime",
 				},
@@ -54,18 +59,21 @@ export function Home() {
 			.catch((err) => {
 				console.error(err);
 			});
-	}, [searchTerm]);
+	}, [searchTerm, offset]);
 
 	return (
 		<main role="main" className="o-colors-page-background">
-			<Header
+			<PaginationSmall
 				apiData={apiData}
 				setApiData={setApiData}
 				searchTerm={searchTerm}
 				setSearchTerm={setSearchTerm}
 				resultsReturned={resultsReturned}
 				offset={offset}
+				setOffset={setOffset}
 				maxResults={maxResults}
+				page={page}
+				setPage={setPage}
 			/>
 			{/* <header className="header"></header> */}
 			<div className="o-colors-page-background o-grid-container o-typography-wrapper">

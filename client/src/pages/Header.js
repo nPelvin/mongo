@@ -22,7 +22,7 @@ function Header({ apiData, setSearchTerm, resultsReturned, offset, maxResults })
 				<div className="o-header__row o-header__top">
 					<div className="o-header__container">
 						<div className="o-header__top-wrapper">
-							<div className="o-header__top-column o-header__top-column--left">
+							{/* <div className="o-header__top-column o-header__top-column--left">
 								<a
 									href="#o-header-search"
 									className="o-header__top-link o-header__top-link--search"
@@ -33,7 +33,7 @@ function Header({ apiData, setSearchTerm, resultsReturned, offset, maxResults })
 										Open search bar
 									</span>
 								</a>
-							</div>
+							</div> */}
 
 							<div className="o-header__top-column o-header__top-column--center">
 								{/* <!--<div className="o-header__top-takeover"></div>--> */}
@@ -48,16 +48,16 @@ function Header({ apiData, setSearchTerm, resultsReturned, offset, maxResults })
 								</a>
 							</div>
 
-							<div className="o-header__top-column o-header__top-column--right">
+							{/* <div className="o-header__top-column o-header__top-column--right"> */}
 								{/* <!--<div className="o-header__top-takeover"></div>--> */}
-								<a
+								{/* <a
 									className="o-header__top-link o-header__top-link--myft"
 									href="/myft"
 									aria-label="My F T"
 								>
 									<span className="o-header__visually-hidden">myFT</span>
 								</a>
-							</div>
+							</div> */}
 						</div>
 					</div>
 				</div>

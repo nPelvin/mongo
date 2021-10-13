@@ -1,6 +1,6 @@
 import { Route, Switch } from "react-router-dom";
 
-import About from "./pages/About";
+// import About from "./pages/About";
 import Home from "./pages/Home";
 
 const App = () => (
@@ -9,9 +9,9 @@ const App = () => (
 			<Home />
 		</Route>
 		{/* <Route path="/results" component={Results}></Route> */}
-		<Route path="/about/this/site">
+		{/* <Route path="/about/this/site">
 			<About />
-		</Route>
+		</Route> */}
 	</Switch>
 );
 

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Header from "./Header";
 import Headline from "./Headline";
+import PaginationSquare from "./PaginationSquare";
 
 function PaginationSmall({
 	apiData,
@@ -75,12 +76,12 @@ function PaginationSmall({
 				offset={offset}
 				maxResults={maxResults}
 				page={page}
-                setPage={setPage}
-                setOffset={setOffset}
+				setPage={setPage}
+				setOffset={setOffset}
 			/>
 			{/* <!-- we recommend showing no more than 7 pages at a time, for more  than 7 pages use the pagination ellipsis --> */}
 
-			<div className="o-buttons-pagination">
+			<div className="o-buttons-pagination pagination">
 				<a
 					href="#"
 					className="
@@ -91,74 +92,63 @@ function PaginationSmall({
 				>
 					<span className="o-buttons-icon__label">Fewer results</span>
 				</a>
-				<button
-					onClick={() => {
-						setOffset((currentPagination[0] - 1) * maxResults);                        
-                        setPage(currentPagination[0]);
-					}}
-					className="o-buttons o-buttons--secondary"
-					aria-current="page"
-				>
-					{currentPagination[0]}
-				</button>
-				<button
-					onClick={() => {
-						setOffset((currentPagination[1] - 1) * maxResults);
-                        setPage(currentPagination[1]);
-					}}
-					className="o-buttons o-buttons--secondary"
-				>
-					{currentPagination[1]}
-				</button>
-				<button
-					onClick={() => {
-						setOffset((currentPagination[2] - 1) * maxResults);                        
-                        setPage(currentPagination[2]);
-					}}
-					className="o-buttons o-buttons--secondary"
-				>
-					{currentPagination[2]}
-				</button>
-				<button
-					onClick={() => {
-						setOffset((currentPagination[3] - 1) * maxResults);
-                        
-                        setPage(currentPagination[3]);
-					}}
-					className="o-buttons o-buttons--secondary"
-				>
-					{currentPagination[3]}
-				</button>
-				<button
-					onClick={() => {
-						setOffset((currentPagination[4] - 1) * maxResults);
-                        
-                        setPage(currentPagination[4]);
-					}}
-					className="o-buttons o-buttons--secondary"
-				>
-					{currentPagination[4]}
-				</button>
-				<button
-					onClick={() => {
-						setOffset((currentPagination[5] - 1) * maxResults);
-                        
-                        setPage(currentPagination[5]);
-					}}
-					className="o-buttons o-buttons--secondary"
-				>
-					{currentPagination[5]}
-				</button>
-				<button
-					onClick={() => {
-						setOffset((currentPagination[6] - 1) * maxResults);
-                        
-                        setPage(currentPagination[6]);
-					}}
-					className="o-buttons o-buttons--secondary"
-				>
-					{currentPagination[6]}
-				</button>
+				<PaginationSquare
+					page={page}
+					arrayIndex={0}
+					setOffset={setOffset}
+					setPage={setPage}
+					maxResults={maxResults}
+					currentPagination={currentPagination}
+				/>
+				<PaginationSquare
+					page={page}
+					arrayIndex={1}
+					setOffset={setOffset}
+					setPage={setPage}
+					maxResults={maxResults}
+					currentPagination={currentPagination}
+				/>
+				<PaginationSquare
+					page={page}
+					arrayIndex={2}
+					setOffset={setOffset}
+					setPage={setPage}
+					maxResults={maxResults}
+					currentPagination={currentPagination}
+				/>
+				<PaginationSquare
+					page={page}
+					arrayIndex={3}
+					setOffset={setOffset}
+					setPage={setPage}
+					maxResults={maxResults}
+					currentPagination={currentPagination}
+				/>
+				<PaginationSquare
+					page={page}
+					arrayIndex={4}
+					setOffset={setOffset}
+					setPage={setPage}
+					maxResults={maxResults}
+					currentPagination={currentPagination}
+				/>
+				<PaginationSquare
+					page={page}
+					arrayIndex={5}
+					setOffset={setOffset}
+					setPage={setPage}
+					maxResults={maxResults}
+					currentPagination={currentPagination}
+				/>
+				<PaginationSquare
+					page={page}
+					arrayIndex={6}
+					setOffset={setOffset}
+					setPage={setPage}
+					maxResults={maxResults}
+					currentPagination={currentPagination}
+				/>
+
 				<a
 					href="#"
 					className="

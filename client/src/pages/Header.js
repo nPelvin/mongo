@@ -193,11 +193,12 @@ function Header({
 					</div>
 				</div>
 			</div>
-			<span className="startingPagination">
+			{/* <span className="startingPagination">
+            can be removed later
 				Results returned: {resultsReturned}, Page:{" "}
 				{(maxResults + offset) / maxResults}/
 				{Math.ceil(resultsReturned / maxResults)}
-			</span>
+			</span> */}
 			{/* <PaginationSmall page={page} /> */}
 		</div>
 	);

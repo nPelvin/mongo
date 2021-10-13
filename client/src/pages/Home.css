@@ -2,9 +2,13 @@
 	margin: 0px;
 	padding: 0px;
 }
+.o-buttons-pagination {
+	justify-content: center;
+}
 
 .search-span {
 	display: block;
+	justify-content: center;
 }
 
 .header {
